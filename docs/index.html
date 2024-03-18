@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> CIFRADO Y DESCIFRADO CÉSAR</title>
 </head>
 
 <body>
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     .encrypted {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      min-width: 100%;
+      min-height: 80vh;
     }
 
     .container {
@@ -21,6 +31,7 @@
       max-width: 1200px;
       display: flex;
       flex-direction: row;
+      align-items: center;
       gap: 1rem;
     }
 
@@ -60,7 +71,32 @@
       padding: .5rem 0 !important;
       border-radius: .5rem !important;
     }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        width: 95%;
+        flex-direction: column;
+      }
+    }
+
+    .footer {
+      min-width: 100%;
+      min-height: 20vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #fff;
+      background-color: #000;
+    }
+
+    .link_light {
+      color: #39ff14;
+    }
+
   </style>
+
   <section class="encrypted">
     <h1>CIFRADO Y DESCIFRADO CÉSAR</h1>
     <div class="alert" id="alert">
@@ -80,6 +116,9 @@
     </div>
 
   </section>
+  <footer class="footer">
+    <p> Desarrollado por <a class="link_light" href="#">YeiiMaccDev</a>. </p>
+  </footer>
   <script type="text/javascript" src="./JS/app.js"></script>
 </body>
 
